@@ -1,0 +1,15 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Madlibs Home</title>
+  </head>
+  <body>
+    <h1>Madlibs</h1>
+    <form action="/story" method="post">
+      {% for prompt in story.prompts %}
+        {{ prompt }}: <input type="text" name="{{ prompt }}"><br>
+      {% endfor %}
+      <input type="submit" value="Generate Story">
+    </form>
+  </body>
+</html>
